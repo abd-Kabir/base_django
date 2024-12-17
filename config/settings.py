@@ -123,6 +123,7 @@ LANGUAGE_CODE = 'en-us'
 # ]
 
 TIME_ZONE = 'UTC'
+# TIME_ZONE = 'Asia/Tashkent'
 USE_I18N = True
 USE_TZ = True
 
@@ -132,10 +133,10 @@ LOCALE_PATHS = [
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = join_path(BASE_DIR, 'static')
 # STATICFILES_DIRS = [
 #     join_path(BASE_DIR, 'static')
 # ]
+STATIC_ROOT = join_path(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = join_path(BASE_DIR, 'media')
@@ -152,7 +153,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         # 'rest_framework.permissions.IsAuthenticated',
     ],
-    'EXCEPTION_HANDLER': 'config.utils.api_exceptions.uni_exception_handler',
+    'EXCEPTION_HANDLER': 'config.core.api_exceptions.uni_exception_handler',
 }
 
 # Swagger
